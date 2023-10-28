@@ -1,5 +1,5 @@
 import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
-import 'package:skywatch/domain/usecases/get_location_usecase.dart';
+import 'package:skywatch/domain/usecases/get_location_by_name_usecase.dart';
 import 'package:skywatch/pages/welcome/welcome_presenter.dart';
 
 class LocationUseCaseObserver extends Observer<LocationRequestResponse> {

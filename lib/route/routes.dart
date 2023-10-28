@@ -1,5 +1,6 @@
 enum Routes {
   city('city'),
+  cities('cities'),
   videos('videos'),
   weather('weather'),
   profile('profile'),

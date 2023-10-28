@@ -4,9 +4,9 @@ import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
 import 'package:skywatch/domain/models/location.dart';
 import 'package:skywatch/domain/repositories/geolocation_repository.dart';
 
-class GetLocationUseCase
+class GetLocationByNameUseCase
     extends UseCase<LocationRequestResponse, LocationRequestData> {
-  GetLocationUseCase(this.locationRespository);
+  GetLocationByNameUseCase(this.locationRespository);
 
   final IGeolocationRepository locationRespository;
 
@@ -22,7 +22,13 @@ class GetLocationUseCase
 
       controller.add(
         LocationRequestResponse(
-          Location.fromMap(response.data),
+          (response.data as List)
+              .map<Location>(
+                (e) => Location.fromMap(
+                  e as Map<String, dynamic>,
+                ),
+              )
+              .toList(),
         ),
       );
     } catch (e) {
@@ -41,6 +47,6 @@ class LocationRequestData {
 }
 
 class LocationRequestResponse {
-  final Location location;
+  final List<Location> location;
   LocationRequestResponse(this.location);
 }

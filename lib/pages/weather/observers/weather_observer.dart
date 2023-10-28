@@ -1,9 +1,9 @@
 import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
 import 'package:skywatch/domain/usecases/get_weather_usecase.dart';
-import 'package:skywatch/pages/welcome/welcome_presenter.dart';
+import 'package:skywatch/pages/weather/weather_presenter.dart';
 
 class WeatherUseCaseObserver extends Observer<WeatherRequestResponse> {
-  final WelcomePresenter presenter;
+  final WeatherPresenter presenter;
   WeatherUseCaseObserver(this.presenter);
 
   @override

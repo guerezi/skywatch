@@ -5,8 +5,8 @@ class MainWeather {
   late double tempMax;
   late int pressure;
   late int humidity;
-  late int seaLevel;
-  late int grndLevel;
+  late int? seaLevel;
+  late int? grndLevel;
 
   MainWeather._();
 

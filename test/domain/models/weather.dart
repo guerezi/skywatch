@@ -71,17 +71,17 @@ void main() {
       expect(weather.wind.deg, 349);
       expect(weather.wind.gust, 1.18);
 
-      expect(weather.rain.hour, 3.16);
+      expect(weather.rain?.hour, 3.16);
 
-      expect(weather.clouds.all, 100);
+      expect(weather.clouds?.all, 100);
 
       expect(weather.dt, 1661870592);
 
-      expect(weather.sys.type, 2);
-      expect(weather.sys.id, 2075663);
-      expect(weather.sys.country, "IT");
-      expect(weather.sys.sunrise, 1661834187);
-      expect(weather.sys.sunset, 1661882248);
+      expect(weather.sys?.type, 2);
+      expect(weather.sys?.id, 2075663);
+      expect(weather.sys?.country, "IT");
+      expect(weather.sys?.sunrise, 1661834187);
+      expect(weather.sys?.sunset, 1661882248);
 
       expect(weather.timezone, 7200);
       expect(weather.id, 3163858);

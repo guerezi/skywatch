@@ -1,5 +1,5 @@
 import 'package:flutter_clean_architecture/flutter_clean_architecture.dart';
-import 'package:skywatch/domain/usecases/gps_usecase.dart';
+import 'package:skywatch/domain/usecases/get_gps_usecase.dart';
 import 'package:skywatch/pages/city_selector/city_selector_presenter.dart';
 
 class GPSUseCaseObserver extends Observer<GPSRequestResponse> {

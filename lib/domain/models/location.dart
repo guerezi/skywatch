@@ -18,4 +18,14 @@ class Location {
       ..state = data['state']
       ..latLng = LatLng.fromMap(data);
   }
+
+  Map<String, dynamic> toMap() {
+    return <String, dynamic>{
+      'name': name,
+      'country': country,
+      'state': state,
+      'lat': latLng.lat,
+      'lon': latLng.lng,
+    };
+  }
 }

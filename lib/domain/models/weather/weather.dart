@@ -15,9 +15,9 @@ class Weather {
   late List<WeatherData> weather;
 
   late LatLng latlng;
-  late Clouds clouds;
-  late Rain rain;
-  late Sys sys;
+  late Clouds? clouds;
+  late Rain? rain;
+  late Sys? sys;
   late MainWeather main;
   late Wind wind;
 
@@ -31,10 +31,10 @@ class Weather {
       ..main = MainWeather.fromMap(data['main'])
       ..visibility = data['visibility']
       ..wind = Wind.fromMap(data['wind'])
-      ..rain = Rain.fromMap(data['rain'])
-      ..clouds = Clouds.fromMap(data['clouds'])
+      ..rain = data['rain'] != null ? Rain.fromMap(data['rain']) : null
+      ..clouds = data['clouds'] != null ? Clouds.fromMap(data['clouds']) : null
       ..dt = data['dt']
-      ..sys = Sys.fromMap(data['sys'])
+      ..sys = data['sys'] != null ? Sys.fromMap(data['sys']) : null
       ..timezone = data['timezone']
       ..id = data['id']
       ..name = data['name']

@@ -9,6 +9,3 @@ Future<void> main() async {
 
   runApp(const SkyWatch());
 }
-
-
-// find . -name '*.dart' | xargs wc -l

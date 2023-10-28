@@ -1,7 +1,7 @@
 class Wind {
   late double speed;
-  late int deg;
-  late double gust;
+  late int? deg;
+  late double? gust;
 
   Wind._();
 
@@ -9,6 +9,6 @@ class Wind {
     return Wind._()
       ..speed = data['speed'].toDouble()
       ..deg = data['deg']
-      ..gust = data['gust'].toDouble();
+      ..gust = data['gust']?.toDouble();
   }
 }
